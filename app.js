@@ -2,10 +2,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('./models/db');
 
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+({message: 'Client created'});
 
 app.use(logger('dev'));
 app.use(express.json());
